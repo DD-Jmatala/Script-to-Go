@@ -1,51 +1,60 @@
-# Script-To-Go
-This script was created to automate the following task:
+This script is created to automate the following task:
 
-Usage: ./Script2GO.sh -f TargetFile <List of IPv4 target address>
+Usage: ./Script2GO.sh -f ListofIPaddress -d TargetDomain
 
-Port Scanning using Nmap:
-  * Nmap TCP port scan top 10K ports.
+Port Scanning using Masscan:
 
-Extract 2nd level domain from Nmap result and perform Subdomain enumeration using:
-  * Amass
-  * Subfinder
-  
+    Port knocking scan 65k ALL ports TCP
+
+Port Service Enumeration using Nmap:
+
+    Service enumeration using the port output from Masscan
+
+Perform Subdomain enumeration using:
+
+    Amass
+    Subfinder
+
 Website screen capturing using:
-  * Aquatone
+
+    Aquatone
 
 Identify active Web urls using HTTP prober:
-  * HTTPx
+
+    HTTPx
 
 Vulnerability Scanning using:
-  * Nuclei
- 
+
+    Nuclei
+
+Add-Ons Web crawler: Checking all posible web application endpoint and link
+
+    hakrawler
+
 This tool will also perform DNS queries againts the discovered subdomains and compare it on your supplied target file to avoid any out-of-scope scanning.
 
-Credit to the following for creating these awesome tools.
-  * https://github.com/projectdiscovery/
-  * https://github.com/OWASP/Amass
-  * https://github.com/michenriksen
-  * https://nmap.org/
+Credit to the author these awesome tools.
 
- 
- # Check the following links to manually install the tools needed.
-Note: Make sure to install them as root and once installed run " export PATH=$PATH:/root/go/bin " 
+    https://github.com/projectdiscovery/
+    https://github.com/OWASP/Amass
+    https://github.com/michenriksen
+    https://github.com/hakluke/hakrawler
+    https://nmap.org/
+    https://github.com/robertdavidgraham/masscan
 
- * Go installation
- https://go.dev/doc/install
- * Subfinder
- https://github.com/projectdiscovery/subfinder
- * Nuclei Scanner
- https://github.com/projectdiscovery/nuclei
- * HTTPx
- https://github.com/projectdiscovery/httpx
- * Amass
- https://github.com/OWASP/Amass/blob/master/doc/install.md
- * DNSx
- https://github.com/projectdiscovery/dnsx
- * Aquatone
- https://github.com/michenriksen/aquatone
+Check the following links to manually install the tools needed.
 
-# Or install them using the installation script.
-* Make sure to run the install.sh as root and run the script on the background.
+Note: Make sure to install them as root and once installed run " export PATH=$PATH:/root/go/bin "
 
+    Go installation https://go.dev/doc/install
+    Subfinder https://github.com/projectdiscovery/subfinder
+    Nuclei Scanner https://github.com/projectdiscovery/nuclei
+    HTTPx https://github.com/projectdiscovery/httpx
+    Amass https://github.com/OWASP/Amass/blob/master/doc/install.md
+    DNSx https://github.com/projectdiscovery/dnsx
+    Aquatone https://github.com/michenriksen/aquatone
+    Hakrawler https://github.com/hakluke/hakrawler
+
+Or install them using the installation script.
+
+Note: Make sure to run the script as "root"
